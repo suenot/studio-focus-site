@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Focus — YouTube without the feed</title>
+<meta name="description" content="Open-source browser extension for YouTube creators. Covers the feed, Shorts and watch pages with a white screen; Studio and your channels stay open.">
+<link rel="icon" href="favicon.png">
+<meta property="og:title" content="Studio Focus — YouTube without the feed">
+<meta property="og:description" content="Check your channel and analytics without getting pulled into the feed.">
+<style>
+  :root { --bg:#fff; --fg:#111; --mute:#666; --line:#e6e6e6; --card:#fafafa; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0e0e0e; --fg:#f3f3f3; --mute:#9a9a9a; --line:#262626; --card:#161616; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 28px 0; display:flex; align-items:center; gap:10px; font-weight:600; }
+  header img { width: 28px; height: 28px; border-radius: 7px; }
+  .hero { padding: 72px 0 48px; }
+  h1 { font-size: clamp(34px, 7vw, 56px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 18px; }
+  .lead { color: var(--mute); font-size: 20px; margin: 0 0 32px; max-width: 560px; }
+  .btn { display:inline-block; padding: 13px 22px; border-radius: 12px; background: var(--fg); color: var(--bg); text-decoration:none; font-weight:600; }
+  .btn.ghost { background: none; color: var(--fg); border: 1px solid var(--line); margin-left: 8px; }
+  section { padding: 40px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 24px; margin: 0 0 16px; letter-spacing: -0.01em; }
+  .grid { display:grid; gap:14px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .btn.ghost { margin: 10px 0 0; } }
+  .card { background: var(--card); border:1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 17px; }
+  .card p { margin: 0; color: var(--mute); font-size: 15px; }
+  ol { padding-left: 20px; color: var(--mute); }
+  ol li { margin: 6px 0; }
+  code { background: var(--card); border:1px solid var(--line); padding: 1px 6px; border-radius: 6px; font-size: 14px; }
+  footer { padding: 36px 0 56px; color: var(--mute); font-size: 14px; border-top: 1px solid var(--line); }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <header><img src="favicon.png" alt=""> Studio Focus</header>
+
+  <div class="hero">
+    <h1>Check your channel.<br>Skip the feed.</h1>
+    <p class="lead">You open YouTube to look at your stats, and an hour later you are watching something else. Studio Focus covers everything that is not about running your channels.</p>
+    <a class="btn" href="https://github.com/suenot/studio-focus">Get it on GitHub</a>
+    <a class="btn ghost" href="#how">How it works</a>
+  </div>
+
+  <section id="how">
+    <h2>What stays open, what is covered</h2>
+    <div class="grid">
+      <div class="card"><h3>Always open</h3><p>YouTube Studio, analytics, content and comments. The channel switcher and account pages.</p></div>
+      <div class="card"><h3>Your channels</h3><p>List your @handles or channel IDs in the popup. Their pages on youtube.com stay visible.</p></div>
+      <div class="card"><h3>Covered in white</h3><p>Home feed, watch pages, Shorts, search and other people's channels. Videos are paused.</p></div>
+      <div class="card"><h3>Escape hatch</h3><p>Need a page for real? Unlock for 5 minutes, or pause the extension for 15.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Install</h2>
+    <ol>
+      <li>Download or clone the <a href="https://github.com/suenot/studio-focus">repository</a>.</li>
+      <li>Open <code>chrome://extensions</code> and turn on Developer mode.</li>
+      <li>Click "Load unpacked" and choose the <code>studio-focus</code> folder.</li>
+    </ol>
+    <p style="color:var(--mute)">Chrome, Edge, Brave and other Chromium browsers. No network requests, no tracking. Settings stay on your device.</p>
+  </section>
+
+  <footer>Open source, MIT license. Made by <a href="https://github.com/suenot">suenot</a>. Also: <a href="https://distract-blocker.suenot.com">Distract Blocker</a>.</footer>
+</main>
+</body>
+</html>
